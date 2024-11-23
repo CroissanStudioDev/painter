@@ -47,8 +47,6 @@ export function PaintingCanvas() {
       const hdAspectRatio = TARGET_HD_WIDTH / TARGET_HD_HEIGHT;
       const containerHeight = containerWidth / hdAspectRatio;
       
-      // Calculate display scale while maintaining original image proportions
-      const displayScale = containerWidth / ORIGINAL_WIDTH;
       
       setCanvasSize({
         width: Math.floor(containerWidth),
