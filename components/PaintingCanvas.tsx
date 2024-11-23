@@ -1,7 +1,6 @@
 'use client';
 
 import { useEffect, useRef, useState } from 'react';
-import Image from 'next/image';
 
 const COLORS = [
   '#FF0000', // Red
@@ -30,10 +29,8 @@ export function PaintingCanvas() {
   const [selectedStyle, setSelectedStyle] = useState<StrokeStyle>('solid');
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const timeoutRef = useRef<NodeJS.Timeout>();
-  const [isDrawing, setIsDrawing] = useState(false);
   const baseImageRef = useRef<HTMLImageElement | undefined>();
   const [canvasSize, setCanvasSize] = useState({ width: 0, height: 0 });
-  const [scale, setScale] = useState(1);
   const [maxDisplayWidth, setMaxDisplayWidth] = useState(DEFAULT_MAX_WIDTH);
 
   // Initialize maxDisplayWidth after component mounts
@@ -57,7 +54,6 @@ export function PaintingCanvas() {
         width: Math.floor(containerWidth),
         height: Math.floor(containerHeight)
       });
-      setScale(displayScale);
     };
 
     calculateSize();
