@@ -18,11 +18,11 @@ const COLORS = [
 const STROKE_STYLES = ['solid', 'pastel', 'pencil'] as const;
 type StrokeStyle = typeof STROKE_STYLES[number];
 
-const ORIGINAL_WIDTH = 4000;
-const ORIGINAL_HEIGHT = 2048;
-const TARGET_HD_WIDTH = 800;   // Reduced from 1280
-const TARGET_HD_HEIGHT = 450;  // Reduced from 720 (maintaining aspect ratio)
-const DEFAULT_MAX_WIDTH = 800; // Reduced from 1280
+const ORIGINAL_WIDTH = 1307;
+const ORIGINAL_HEIGHT = 1030;
+const TARGET_HD_WIDTH = 1307;   // Reduced from 1280
+const TARGET_HD_HEIGHT = 1030;  // Reduced from 720 (maintaining aspect ratio)
+const DEFAULT_MAX_WIDTH = 1307; // Reduced from 1280
 
 export function PaintingCanvas() {
   const [selectedColor, setSelectedColor] = useState(COLORS[0]);
