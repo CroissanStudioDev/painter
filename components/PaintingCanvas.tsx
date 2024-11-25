@@ -24,6 +24,7 @@ const TARGET_HD_WIDTH = 1307;   // Reduced from 1280
 const TARGET_HD_HEIGHT = 1030;  // Reduced from 720 (maintaining aspect ratio)
 const DEFAULT_MAX_WIDTH = 1307; // Reduced from 1280
 
+
 export function PaintingCanvas() {
   const [selectedColor, setSelectedColor] = useState(COLORS[0]);
   const [selectedStyle, setSelectedStyle] = useState<StrokeStyle>('solid');
